@@ -1,5 +1,5 @@
 # Occultation and Elevation Data Analysis
-The Shuttle Radar Topography Mission (SRTM) by NASA provided worldwide 3 arcsecond resolution of the elevation around the globe. Earth 2014 and GMTED 2010 are similar global digital elevation models of the Earth at varying resolutions. The following code will download and install and cleanup the datasets required for the code to run: 
+The Shuttle Radar Topography Mission (SRTM) by NASA provided worldwide 3 arcsecond resolution of the elevation around the globe. Earth 2014 and GMTED 2010 are similar global digital elevation models of the Earth at varying resolutions. The following code located in ```Elevation Data Download``` will download and install and cleanup the datasets required for the code to run: 
 ```
 chmod +x EARTH2014-download.sh
 chmod +x SRTM-download.sh
