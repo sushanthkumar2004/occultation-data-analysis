@@ -1,0 +1,94 @@
+	1 	id			int		Identifier
+	2 	julian_date		double		Julian date of the occultation in TDB
+	3 	TT_UTC 			double		TT-UTC(s)
+	4 	occDate 		datetime	Gregorian date of the occultation (UTC)
+	5 	obj_number 	 	varchar(20) 	number of the object
+	6 	obj_name 	 	varchar(40)	name of the object
+	7 	idspk 			int		spk identifier of the object (SPICE NAIF)
+	8 	typ 	 		varchar(3)	type of the object
+	9 	radius1 	 	double		radius of the object (km)
+	10 	radius2 		double 		second radius of the object (in case of atmosphere/rings)
+	11 	dist_moon 		double 		lunar elongation at time of occultation (deg)
+	12 	phase_moon 		double 		lunar phase (deg)
+	13 	elongation 		double 		solar elongation (deg)
+	14 	CA 			double 		minimum close approach distance (arcsec)
+	15 	PA 			double 		object position angle related to star (in deg)
+	16 	max_dur 		double 		maximum duration of the occultation (s)
+	17 	t_min 			double 		difference between start of occultation and mid time (min)
+	18 	t_max 			double 		difference between end of occultation and mid time (min)
+	19 	vit_r 			double 		relative velocity (km/s)
+	20 	ephemeris 		varchar(20) 	ephemeris
+	21 	RA_ast_obj 		double 		right ascension of the object (deg)
+	22 	DE_ast_obj 		double 		declination of the object (deg)
+	23 	RA_app_obj 		double 		apparent right ascension of the object (deg)
+	24 	DE_app_obj 		double 		apparent declination of the object (deg)
+	25 	sigRA_obj 		double 		uncertainty (1-sigma) in right ascension of the object (mas)
+	26 	sigDE_obj 		double 		uncertainty (1-sigma) in declination of the object (mas)
+	27 	geo_dist 		double 		geocentric distance of the object (au)
+	28 	sig_geo_dist 		double 		uncertainty in geocentric distance (km)
+	29 	magapp_obj 		double 		apparent magnitude of the object
+	30 	magdrop 		double 		expected magnitude drop
+	31 	bessel_x0 		double 		X0 bessel coordinate (in Earth radius)
+	32 	bessel_y0 		double 		Y0 bessel coordinate
+	33 	bessel_xp 		double 		XP bessel coordinate (velocity in Earth radius/day)
+	34 	bessel_yp 		double 		YP bessel coordinate (velocity)
+	35 	sig_x0_km 		double 		uncertainty of X0
+	36 	sig_y0_km 		double 		uncertainty of X0
+	37 	sig_time 		double 		uncertainty of timing (s)
+	38 	sig_dis_km 		double 		uncertainty in distance in bessel plan (km)
+	39 	sig_ca_mas 		double 		uncertainty of closest approach (mas)
+	40 	radius_app 		double 		apparent radius of the object (mas)
+	41 	probability 		double 		probability of the occultation on the central line
+	42 	ZONEOCC 		varchar(80) 	zone where occultation may be visible
+	43 	Gmagp 			double 		corrected G magnitude (Gaia)
+	44 	Rmagp 			double 		corrected RP magnitude (Gaia)
+	45 	Hmagp 			double 		corrected H magnitude
+	46 	RA_icrf_star 		double 		right ascension of occulted star in ICRF (deg) without parallax and proper motion
+	47 	DE_icrf_star 		double 		declination of occulted star in ICRF (deg) without parallax and proper motion
+	48 	RA_icrf_starP 		double 		right ascension of occulted star in ICRF (deg) with parallax and proper motion
+	49 	DE_icrf_starP 		double 		declination of occulted star in ICRF (deg) with parallax and proper motion
+	50 	RA_app_star 		double 		apparent right ascension of occulted star (deg) 
+	51 	DE_app_star 		double 		apparent declination of occulted star (deg)
+	52 	sigRA_star 		double 		uncertainty in right ascension of the star (mas) (with parallax and proper motion uncertainties)
+	53 	sigDE_star 		double 		uncertainty in declination of the star (mas)
+	54 	sourceStar 		varchar(10) 	source of star astrometry
+	55 	star_id 		varchar(20) 	Gaia identifier of the star
+	56 	RA_cat_icrf 		double 		right ascension of occulted star in ICRF in the catalogue (deg)
+	57 	DE_cat_icrf 		double 		declination of occulted star in ICRF in the catalogue(deg) 
+	58 	parallax 		double 		parallax of the occulted star (mas)
+	59 	epoch 			double 		epoch of the catalogue
+	60 	sRAc 			double 		uncertainty in right ascension in the catalogue (mas)
+	61 	sDEc 			double 		uncertainty in declination in the catalogue (mas)
+	62 	parlx_err 		double 		uncertainty in parallax in the catalogue (mas)
+	63 	exc_noise 		double 		excess noise (Gaia)
+	64 	pmRA 			double 		proper motion in R.A. (mas/yr)
+	65 	pmDE 			double 		proper motion in Dec. (mas/yr)
+	66 	sPMRA 			double 		uncertainty in proper motion in R.A. (mas/yr)
+	67 	sPMDE 			double 		uncertainty in proper motion in Dec. (mas/yr)
+	68 	sourcePM 		varchar(10) 	source of proper motion
+	69 	Gmag 			double 		G magnitude of the occulted star
+	70 	RPmag 			double 		RP magnitude of the occulted star
+	71 	BPmag 			double 		BP magnitude of the occulted star
+	72 	Jmag 			double 		J magnitude of the occulted star
+	73 	Hmag 			double 		H magnitude of the occulted star
+	74 	Kmag 			double 		K magnitude of the occulted star
+	75 	gdr1_id 		varchar(20) 	source identifier of the star in GaiaDR1
+	76 	offsetRA 		double 		offset in R.A. (arcsec)
+	77 	offsetDE 		double 		offset in Dec. (arcsec)
+	78 	modcalcul 		int(11) 	mode computation (1: apparent)
+	79 	tot_unc_RA 		double 		total uncertainty in R.A. (mas)
+	80 	tot_unc_DE 		double 		total uncertainty in Dec. (mas)
+	81 	lon_subplanet 		double 		subpoint longitude (deg) 
+	82 	lat_subplanet 		double 		subpoint latitude (deg)
+	83 	GappST 			double 		Greenwich sideral time (deg)
+	84 	sun_bessel_x 		double 		x coordinate of the Sun in bessel plan
+	85 	sun_bessel_y 		double 		y coordinate of the Sun in bessel plan
+	86 	sun_bessel_z 		double 		z coordinate of the Sun in bessel plan
+	87 	moon_bessel_x 		double 		x coordinate of the Moon in bessel plan
+	88 	moon_bessel_y 		double 		y coordinate of the Moon in bessel plan
+	89 	moon_bessel_z 		double 		z coordinate of the Moon in bessel plan
+	90 	file_map 		varchar(80) 	name of the file map
+	91 	creation_date 		datetime 	creation date
+	92 	ruwe 			double 		RUWE (Gaia parameter)
+	93 	fg_dupli 		tinyint(1) 	flag of duplicity (Gaia)
+	94 	fg_display 		tinyint(1) 	flag of display
